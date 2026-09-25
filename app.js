@@ -66,3 +66,7 @@
 //-------------DOM manupulation-----------------
 console.log(document);
 document.write("Hello, World!");
+
+let title = document.getElementById("title");
+console.log(title.innerText);
+title.innerText = "ThInO";
