@@ -65,8 +65,27 @@
 
 //-------------DOM manupulation-----------------
 console.log(document);
-document.write("Hello, World!");
+// document.write("Hello, World!");
 
 let title = document.getElementById("title");
 console.log(title.innerText);
-title.innerText = "ThInO";
+title.innerText = "Number Counter";
+
+let number = 0;
+function btnAddOnAction(){
+    number = number + 1;
+    title.innerText="Number Counter - " + number;
+} 
+function btnMinusOnAction(){
+    number = number - 1;
+    validateMinus();
+    title.innerText="Number Counter - " + number;
+}
+function validateMinus(){
+    if(number < 0){
+        number = 0 ;
+        // Changed 'counter' to 'title' to match your existing variable
+        title.innerText = "Number Counter - " + number;
+    }
+}
+
